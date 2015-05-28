@@ -1,6 +1,6 @@
 {
   "name": "apidoc-md",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "generate API documentation for your README from comments in your source-code",
   "main": "index.js",
   "bin": "./bin/apidoc-md.js",
