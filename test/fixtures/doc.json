@@ -1,0 +1,213 @@
+[
+  {
+    "type": "get",
+    "url": "/license/:productId/:customerId/:licenseKey",
+    "title": "fetch license information for npmE.",
+    "name": "GetLicense",
+    "group": "License",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "productId",
+            "description": "<p>product license is associated with.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "customerId",
+            "description": "<p>customer license is associated with.</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "licenseKey",
+            "description": "<p>the private key associated with a license.</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>Object</p> ",
+            "optional": false,
+            "field": "details",
+            "description": "<p>serialized license (seats, ends, begins, expired).</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "signature",
+            "description": "<p>we sign the details object.</p> "
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "lib/controllers/license.js",
+    "groupTitle": "License"
+  },
+  {
+    "type": "delete",
+    "url": "/stripe/:id",
+    "title": "delete customer from stripe",
+    "name": "DeleteCustomer",
+    "group": "Stripe",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "id",
+            "description": "<p>npm username.</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "status",
+            "description": "<p>of paid stripe subscription.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Boolean</p> ",
+            "optional": false,
+            "field": "expired",
+            "description": "<p>is the user's license expired.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "email",
+            "description": "<p>email associated with stripe subscription.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Integer</p> ",
+            "optional": false,
+            "field": "next_billing_date",
+            "description": "<p>when will we next charge the card.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Integer</p> ",
+            "optional": false,
+            "field": "next_billing_amount",
+            "description": "<p>how much will we next charge you.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Object</p> ",
+            "optional": false,
+            "field": "card",
+            "description": "<p>object representing the user's credit-card</p> "
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "lib/controllers/stripe.js",
+    "groupTitle": "Stripe"
+  },
+  {
+    "type": "get",
+    "url": "/stripe/:id",
+    "title": "fetch stripe customer",
+    "name": "GetCustomer",
+    "group": "Stripe",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "id",
+            "description": "<p>npm username.</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "status",
+            "description": "<p>of paid stripe subscription.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Boolean</p> ",
+            "optional": false,
+            "field": "expired",
+            "description": "<p>is the user's license expired.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>String</p> ",
+            "optional": false,
+            "field": "email",
+            "description": "<p>email associated with stripe subscription.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Integer</p> ",
+            "optional": false,
+            "field": "next_billing_date",
+            "description": "<p>when will we next charge the card.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Integer</p> ",
+            "optional": false,
+            "field": "next_billing_amount",
+            "description": "<p>how much will we next charge you.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "<p>Object</p> ",
+            "optional": false,
+            "field": "card",
+            "description": "<p>object representing the user's credit-card</p> "
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "CustomerNotFound",
+            "description": "<p>customer was not found in stripe, i.e., doesn't have account.</p> "
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "lib/controllers/stripe.js",
+    "groupTitle": "Stripe"
+  }
+]

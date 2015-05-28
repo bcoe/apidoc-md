@@ -1,0 +1,31 @@
+{
+  "name": "apidoc-md",
+  "version": "1.0.0",
+  "description": "generate API documentation for your README from comments in your source-code",
+  "main": "index.js",
+  "bin": "node ./bin/apidoc-md.js",
+  "scripts": {
+    "test": "standard && tap --coverage ./test/*.js"
+  },
+  "keywords": [
+    "markdown",
+    "apidoc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bcoe/apidoc-md.git"
+  },
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "0.13.1",
+    "handlebars": "^3.0.3",
+    "lodash": "^3.9.3",
+    "yargs": "^3.9.1"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "standard": "^3.11.1",
+    "tap": "^1.2.0"
+  }
+}
