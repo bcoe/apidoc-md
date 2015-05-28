@@ -43,7 +43,7 @@ source-code. Uses [apiDoc](https://github.com/apidoc/apidoc).
 {{#if @first}}**Parameters**
 
 {{/if}}
-* **<{{{type}}}> {{field}}:** {{{description}}}
+* **`{{{type}}}` {{field}}:** {{{description}}}
 {{#if @last}}
 
 {{/if}}
@@ -52,7 +52,7 @@ source-code. Uses [apiDoc](https://github.com/apidoc/apidoc).
 {{#if @first}}**Response**
 
 {{/if}}
-* **<{{{type}}}> {{field}}:** {{{description}}}
+* **`{{{type}}}` {{field}}:** {{{description}}}
 {{#if @last}}
 
 {{/if}}
